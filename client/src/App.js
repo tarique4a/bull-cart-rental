@@ -14,10 +14,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" exact element={<Home/>}></Route>
-          <Route path="/login" exact element={<Login/>}></Route>
-          <Route path="/register" exact element={<Register/>}></Route>
-          <Route path="/bookingcar" exact element={<BookingCar/>}></Route>
+          <Route path="/" exact element={<Home/>} />
+          <Route path="/login" exact element={<Login/>} />
+          <Route path="/register" exact element={<Register/>} />
+          <Route path="/booking/:carid" exact element={<BookingCar/>} />
+          {/* <Route path="/bookingcar/:carid" element={<BookingCar/>} /> */}
+          
         </Routes>
       </BrowserRouter>
     </div>

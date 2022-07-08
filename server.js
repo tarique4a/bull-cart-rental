@@ -11,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/cars',require('./routes/carsRoutes'))
 app.use('/api/users',require('./routes/userRoute'))
+app.use('/api/bookings/' , require('./routes/bookingRoute'))
 app.get('/',(req,res)=>res.send('hello world'))
 app.listen(port,()=>console.log(`Server started ${port}`));
 
