@@ -1,21 +1,27 @@
-require('dotenv').config();
+require("dotenv").config();
 const mongoose = require("mongoose");
-const mongodb = process.env.mongodb;
+const MONGODB = process.env.MONGODB;
 
-function db() {
-   mongoose.connect(mongodb, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
-  const connection=mongoose.connection;
-  connection.on("connected",()=>{
-      console.log("mongodb connected");
-  })
-  connection.on("error",()=>{
-      console.log("error not connected");
-  })
+function connectDB(){
+
+    mongoose.connect(MONGODB, {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+      });
+
+    const connection = mongoose.connection
+
+    connection.on('connected' , ()=>{
+        console.log('Mongo DB Connection Successfull')
+    })
+
+    connection.on('error' , ()=>{
+        console.log('Mongo DB Connection Error')
+    })
+
 
 }
-db();
 
-module.exports = mongoose;
+connectDB()
+
+module.exports = mongoose

@@ -4,7 +4,7 @@ const Booking = require("../models/bookingModel");
 const Car = require("../models/carModel");
 const { v4: uuidv4 } = require("uuid");
 const stripe = require("stripe")(
-  "sk_test_51LHXP8SFw5PiLER1aO1VURL7iUuktg2Dtg13dhavjsSuQUVVM0Td8gbNMFCsGuRUGwQh0Pr6Uijo8AWnuTbgy82S00VsAz61L1"
+  "sk_test_51IYnC0SIR2AbPxU0EiMx1fTwzbZXLbkaOcbc2cXx49528d9TGkQVjUINJfUDAnQMVaBFfBDP5xtcHCkZG1n1V3E800U7qXFmGf"
 );
 router.post("/bookcar", async (req, res) => {
   const { token } = req.body;
